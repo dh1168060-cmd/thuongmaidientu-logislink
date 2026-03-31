@@ -1,0 +1,265 @@
+/* =========================================
+   1. THIẾT LẬP CHUNG
+   ========================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Arial', sans-serif; background-color: #f5f7fa; color: #333; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; padding: 0 15px; }
+
+/* =========================================
+   2. HEADER & LOGO
+   ========================================= */
+.main-header { background: #fff; padding: 10px 0; border-bottom: 1px solid #eee; }
+
+.logo-container { display: flex; align-items: center; gap: 10px; flex: 1; }
+.logo-icon { height: 45px; width: auto; }
+.logo-text { font-size: 24px; font-weight: bold; color: #333; letter-spacing: -1px; }
+
+/* Thanh tìm kiếm */
+.search-box { flex: 2; display: flex; border: 1px solid #e0e0e0; border-radius: 4px; overflow: hidden; margin: 0 30px; }
+.search-box input { width: 100%; padding: 10px 15px; border: none; outline: none; }
+.search-box button { background: #00a0e9; color: white; border: none; padding: 0 20px; cursor: pointer; }
+
+/* User Menu */
+.user-menu { display: flex; gap: 20px; flex: 1; justify-content: flex-end; }
+.menu-item { text-align: center; font-size: 12px; position: relative; cursor: pointer; color: #333; display: flex; flex-direction: column; align-items: center;}
+.badge { position: absolute; top: -5px; right: 5px; background: #e74c3c; color: white; border-radius: 50%; padding: 2px 6px; font-size: 10px; }
+
+/* =========================================
+   3. THANH MENU NGANG
+   ========================================= */
+.nav-bar { background: #fff; border-bottom: 1px solid #eee; }
+.nav-bar ul { list-style: none; display: flex; padding: 12px 0; margin-left: 280px; }
+.nav-bar li { margin-right: 25px; font-weight: bold; color: #444; cursor: pointer; font-size: 14px; }
+.nav-bar li:hover { color: #00a0e9; }
+
+/* =========================================
+   4. SIDEBAR (THANH BÊN TRÁI) - PHẦN BẠN CẦN SỬA
+   ========================================= */
+.main-layout { margin-top: 20px; align-items: flex-start; gap: 20px; display: flex; }
+.sidebar { width: 260px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.sidebar-header { background: #00a0e9; color: white; padding: 15px; font-weight: bold; text-align: center; }
+
+/* Tiêu đề mục lớn (Dịch vụ vận chuyển, Kho bãi...) */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #f9f9f9;
+}
+.menu-toggle b { font-size: 14px; color: #333; }
+.arrow { color: #999; font-size: 12px; transition: 0.3s; }
+
+/* Khối menu con màu xám thụt lề */
+.sub-menu {
+    list-style: none;
+    display: none; /* Mặc định ẩn, dùng JavaScript hoặc thêm class active để hiện */
+    background-color: #f8f9fa; /* Màu xám nhạt chuẩn mẫu */
+    padding: 5px 0;
+}
+
+/* Khi bấm mở sẽ hiện class này */
+.sub-menu.active { display: block; }
+
+.sub-menu li {
+    padding: 8px 15px 8px 35px; /* Thụt lề chữ vào trong */
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.sub-menu li:hover { color: #00a0e9; background-color: #f0f0f0; }
+
+/* Xoay mũi tên khi mở */
+.menu-toggle.open .arrow { transform: rotate(180deg); color: #00a0e9; }
+
+/* Các nhóm bộ lọc (Phạm vi, Giá, Thời gian) */
+.filter-group { padding: 15px; border-top: 1px solid #f0f0f0; }
+.filter-group h4 { font-size: 14px; margin-bottom: 10px; color: #333; }
+.radio-group { display: flex; gap: 15px; font-size: 13px; }
+.radio-group label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+
+.input-row { display: flex; align-items: center; gap: 5px; }
+.input-row input {
+    width: 100%; padding: 8px; border: 1px solid #ddd;
+    border-radius: 5px; font-size: 12px; outline: none;
+}
+.input-row input:focus { border-color: #00a0e9; }
+
+/* =========================================
+   5. NỘI DUNG CHÍNH & BANNER (SỬA LỖI)
+   ========================================= */
+.content { flex: 1; }
+
+/* 1. Thu hẹp độ cao của toàn bộ Banner */
+.banner { 
+    background-color: #e3f2fd; 
+    padding: 10px 10px;      /* Giảm padding từ 30px xuống 15px để khung hẹp lại */
+    border-radius: 12px; 
+    margin-bottom: 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    min-height: 80px;       /* Đặt chiều cao tối thiểu thấp xuống (khoảng 140px) */
+}
+
+/* 2. Thu nhỏ Logo nhỏ bên trong Banner */
+.small-logo {
+    height: 60px !important; /* Giảm từ 40px xuống 28px cho tinh tế hơn */
+    width: auto;
+    align-items: center; 
+    margin-bottom: 20px;      /* Giảm khoảng cách dưới logo */
+}
+
+/* 3. Thu nhỏ chữ Tiêu đề */
+.banner-left h2 { 
+    color: #0d47a1; 
+    font-size: 20px;         /* Giảm cỡ chữ từ 24px xuống 20px */
+    margin-bottom: 12px;     /* Giảm khoảng cách dưới chữ */
+    font-weight: bold;
+}
+
+/* 4. Thu nhỏ nút bấm */
+.btn-now { 
+    background: #00daff; 
+    color: white; 
+    border: none; 
+    padding: 6px 25px;       /* Thu nhỏ nút (8px -> 6px) */
+    border-radius: 20px; 
+    font-weight: bold; 
+    font-size: 10px;         /* Giảm cỡ chữ trong nút */
+    cursor: pointer; 
+}
+
+/* 5. Thu nhỏ hình minh họa bên phải */
+.banner-right img {
+    max-width: 60px;        /* Thu nhỏ ảnh minh họa từ 350px xuống 250px */
+    height: auto;
+}
+.banner-left h2 { 
+    color: #0d47a1; 
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    font-weight: bold;
+}
+
+/* 4. Khối bên phải */
+.banner-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-right img {
+    max-width: 250px;          /* Khống chế ảnh minh họa không bị tràn */
+    height: auto;
+}
+
+/* 5. Nút Trang ngay */
+.btn-now { 
+    background: #00daff; 
+    color: white; 
+    border: none; 
+    padding: 10px 35px; 
+    border-radius: 20px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+.banner-left {
+    flex: 2;                 /* Chiếm 50% diện tích bên trái */
+    display: flex !important;/* Kích hoạt Flexbox */
+    flex-direction: column;  /* Xếp Logo, Chữ, Nút thành 1 cột dọc */
+    align-items: center;     /* CĂN GIỮA THEO CHIỀU NGANG (Trục phụ) */
+    justify-content: center; /* CĂN GIỮA THEO CHIỀU DỌC (Trục chính) */
+    text-align: center;      /* Căn giữa dòng chữ */
+}
+
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.card { background: #fff; border-radius: 8px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; border-radius: 5px; height: 140px; object-fit: cover; }
+.card h3 { font-size: 14px; margin: 10px 0; height: 40px; overflow: hidden; }
+.card .price { color: #00a0e9; font-weight: bold; }
+/* Footer Styles */
+.main-footer {
+    background-color: #fff;
+    color: #333;
+    padding: 60px 0 20px 0;
+    border-top: 2px solid #00a0e9; /* Đường kẻ xanh thương hiệu */
+    margin-top: 50px;
+}
+
+/* Chia 3 cột bằng Grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Chia đều 3 phần bằng nhau */
+    gap: 40px;
+    align-items: start;
+}
+
+/* Định dạng tiêu đề cột */
+.footer-column h4 {
+    color: #00a0e9;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Đường gạch chân dưới tiêu đề */
+.footer-column h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #00d2ff;
+}
+
+/* Nội dung chữ trong footer */
+.footer-column p, .footer-column li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.footer-column.about p strong {
+    color: #0d47a1;
+}
+
+.slogan {
+    margin-top: 10px;
+    color: #00a0e9 !important;
+}
+
+/* Danh sách liên kết và icon */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer-links li:hover {
+    color: #00a0e9;
+    padding-left: 5px;
+}
+
+/* Dòng bản quyền cuối trang */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #999;
+}

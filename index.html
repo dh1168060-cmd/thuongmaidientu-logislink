@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logislink - Giao diện chuẩn</title>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logislink - Giao diện chuẩn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo1.jpg" alt="Logislink Logo" class="logo-icon">
+                <span class="logo-text">logislink</span>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm dịch vụ vận chuyển, lưu kho...">
+                <button id="searchBtn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="menu-item">🛒<br>Giỏ hàng</div>
+                <div class="menu-item" style="position: relative;">
+                    ✉️<span class="badge">1</span><br>Tin nhắn
+                </div>
+                <div class="menu-item">👤<br>Dạo đồ ▾</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="container">
+            <ul>
+                <li>Hàng quốc tế</li>
+                <li>Vận tải nội địa</li>
+                <li>Kho bãi</li>
+                <li>Hải quan</li>
+                <li>Tin tức</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-layout">
+    <aside class="sidebar">
+    <div class="sidebar-header">Trang chủ</div>
+    
+    <ul class="side-menu">
+        <li class="menu-toggle">
+            <b>Dịch vụ vận chuyển</b> <span class="arrow">⌄</span>
+        </li>
+        <ul class="sub-menu">
+            <li>Dịch vụ vận chuyển <span class="arrow">⌄</span></li>
+        </ul>
+
+        <li class="menu-toggle open"> <b>Dịch vụ kho bãi</b> <span class="arrow">⌄</span>
+        </li>
+        <ul class="sub-menu active"> <li>Vận tải nội địa</li>
+            <li>Vận tải hho bãi</li>
+            <li>Vận tải kho bãi</li>
+        </ul>
+
+        <li class="menu-toggle open">
+            <b>Dịch vụ giá trị gia tăng</b> <span class="arrow">⌄</span>
+        </li>
+        <ul class="sub-menu active">
+            <li>Dịch vụ kho bãi</li>
+            <li>Dịch vụ giá trị gia tăng</li>
+        </ul>
+
+        <li class="menu-toggle open">
+            <b>Thiết bị logistic</b> <span class="arrow">⌄</span>
+        </li>
+        <ul class="sub-menu active">
+            <li>Thiết bị logistic <span class="arrow">⌄</span></li>
+            <li>Thiết bị logistic <span class="arrow">⌄</span></li>
+        </ul>
+    </ul>
+
+    <div class="filter-group">
+        <h4>Phạm vi</h4>
+        <div class="radio-group">
+            <label><input type="radio" name="r" checked> Phạm vi</label>
+            <label><input type="radio" name="r"> Lưới kho</label>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h4>Thời gian</h4>
+        <div class="input-row">
+            <input type="text" placeholder="📅 Thôn"> - <input type="text" placeholder="🕒 ... 📅">
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h4>Giá</h4>
+        <div class="input-row">
+            <input type="text" value="20,000 đ"> - <input type="text" value="130,000 đ">
+        </div>
+    </div>
+</aside>
+
+        <main class="content">
+            
+    <div class="banner">
+    <div class="banner-left">
+        <img src="logo.jpg" alt="logislink" class="small-logo">
+        <h2>KẾT NỐI CHUỖI CUNG ỨNG CỦA BẠN</h2>
+        <button class="btn-now">Trang ngay</button>
+    </div>
+
+    <div class="banner-right">
+        <img src="logo2.jpg" alt="logislink">
+    </div>
+</div>
+
+            <div class="product-grid">
+    <div class="card">
+        <img src="cont 40ft.jpg" alt="Xe container">
+        <h3>Vận tải container 40ft (Hải Phòng - HCM)</h3>
+        <p class="price">12,500,000 đ</p>
+    </div>
+    <div class="card">
+        <img src="lưu kho lạnh.jpg" alt="Kho lạnh">
+        <h3>Lưu kho lạnh (tháng)</h3>
+        <p class="price">4,500,000 đ/ pallet</p>
+    </div>
+    <div class="card">
+        <img src="chuyển phát nhanh.jpg" alt="Chuyển phát nhanh">
+        <h3>Chuyển phát nhanh (HN - ĐN)</h3>
+        <p class="price">45,000 đ</p>
+    </div>
+    <div class="card">
+    <img src="cont 40ft đt.jpg" alt="Vận tải biển">
+    <h3>Vận tải container 40ft (Hải Phòng - HCM)</h3>
+    <p class="price">4,500,000 đ</p>
+</div>
+
+<div class="card">
+    <img src="chuyển phát nhanh HP-HCm.jpg" alt="Chuyển phát">
+    <h3>Chuyển phát nhanh (Hải Phòng - HCM)</h3>
+    <p class="price">45,000 đ</p>
+</div>
+<div class="card">
+    <img src="cont.jpg" alt="Vận tải DHL">
+    <h3>Vận tải container 40ft (Hải Phòng - HCM)</h3>
+    <p class="price">1,000,000 đ</p>
+</div>
+</div>
+        </main>
+    </div>
+    <script>
+    // Lấy tất cả các nút có khả năng đóng mở
+   const toggles = document.querySelectorAll('.menu-toggle');
+
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+        // Tìm menu con ngay bên cạnh
+        const subMenu = this.nextElementSibling;
+        
+        // Đóng/mở menu con
+        subMenu.classList.toggle('active');
+        
+        // Hiệu ứng xoay mũi tên
+        this.classList.toggle('open');
+    });
+});
+</script>
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-column about">
+            <h4>VỀ CHÚNG TÔI</h4>
+            <p><strong>LOGISLINK</strong> – Nền tảng kết nối dịch vụ Logistics B2B</p>
+            <p class="slogan"><i>Slogan: “Kết nối đúng nhà cung cấp – Tối ưu toàn bộ chuỗi cung ứng”</i></p>
+        </div>
+
+        <div class="footer-column">
+            <h4>CHÍNH SÁCH BẢO MẬT</h4>
+            <ul class="footer-links">
+                <li>🔒 Cài đặt chứng chỉ SSL/HTTPS</li>
+                <li>🛡️ Bảo mật hệ thống (Defense in Depth)</li>
+                <li>🔄 Cập nhật thường xuyên</li>
+                <li>🔑 Xác thực 2 yếu tố (2FA)</li>
+                <li>💾 Sao lưu dữ liệu tự động (Backup)</li>
+            </ul>
+        </div>
+
+        <div class="footer-column contact">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+            <ul class="footer-links">
+                <li>📞 +84 82 5691895</li>
+                <li>✉️ dh1168060@gmail.com</li>
+                <li>📍 88 Doãn Uẩn, phường Khuê Mỹ, quận Ngũ Hành Sơn, TP Đà Nẵng</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Logislink. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    
+    // Lấy tất cả các ô sản phẩm
+    const productCards = document.querySelectorAll('.card');
+
+    function handleSearch() {
+        // Lấy từ khóa, xóa khoảng trắng và chuyển về chữ thường
+        const keyword = searchInput.value.toLowerCase().trim();
+
+        productCards.forEach(card => {
+            // Lấy TẤT CẢ chữ có trong ô sản phẩm đó
+            const allText = card.innerText.toLowerCase();
+            
+            if (allText.includes(keyword)) {
+                card.style.display = "block"; // Hiện
+            } else {
+                card.style.display = "none";  // Ẩn
+            }
+        });
+    }
+
+    // Lắng nghe khi bấm nút
+    searchBtn.onclick = handleSearch;
+
+    // Lắng nghe khi đang gõ (vừa gõ chữ 'x' là nó lọc luôn)
+    searchInput.onkeyup = handleSearch;
+</script>
+</body>
+</html>
